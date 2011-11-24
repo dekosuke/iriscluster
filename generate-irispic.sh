@@ -1,1 +1,1 @@
-gnuplot -e "set terminal png size 400, 300; set output 'iris.png'; set title 'Iris Clusters'; plot 'iris.cls0' using 1:2 with points title 'Setosa','iris.cls1' using 1:2 with points title 'Versicolor','iris.cls2' using 1:2 with points title 'Virginica'"
+gnuplot -e "set terminal png size 400, 300; set output 'iris.png'; set title 'Iris Clusters'; set xlabel 'sepal length [cm]'; set ylabel 'sepal width [cm]'; plot 'iris.cls0' using 1:2 with points title 'Setosa','iris.cls1' using 1:2 with points title 'Versicolor','iris.cls2' using 1:2 with points title 'Virginica'"
