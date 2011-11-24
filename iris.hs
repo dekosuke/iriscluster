@@ -17,11 +17,9 @@ main = do
 
 printCluster :: [[Vec]] -> Int -> IO ()
 printCluster cls i =
-  mapM_ (printVector i) cluster
+  writeFile ("iris.cls"++show i) c
   where cluster = cls !! i
-        printVector :: Int -> Vec -> IO ()
-        printVector i vec = 
-         putStrLn $ show (vec ! 0)++" "++show (vec ! 1)++" "++show (fromIntegral i/2.0)
+        c = unlines $ map (\vec->show (vec ! 0)++" "++show (vec ! 1)) cluster
 {-
   where go dim nb k 0 = return ()
         go dim nb k i = do
